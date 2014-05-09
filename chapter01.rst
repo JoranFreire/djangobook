@@ -1,51 +1,47 @@
 =================================
-Chapter 1: Introduction to Django
+Capítulo 1: Introdução ao Django
 =================================
 
-This book is about Django, a Web development framework that saves you time
-and makes Web development a joy. Using Django, you can build and maintain
-high-quality Web applications with minimal fuss.
+Esse livro é sobre o Django, um framework para desenvolvimento web que salva seu tempo 
+e faz o desenvolvimento web ser divertido. Usando Django, você pode criar e manter em alta qualidade 
+aplicações web com mínimos exageros.
 
-At its best, Web development is an exciting, creative act; at its worst,
-it can be a repetitive, frustrating nuisance. Django lets you focus on the fun
-stuff -- the crux of your Web application -- while easing the pain of the
-repetitive bits. In doing so, it provides high-level abstractions of common
-Web development patterns, shortcuts for frequent programming tasks, and
-clear conventions for how to solve problems. At the same time, Django tries to
-stay out of your way, letting you work outside the scope of the framework as
-needed.
+E o melhor, desenvolvimento web é excitante, um ato criativo, ao contrário pode ser 
+repetitivo, e altamente frustrante. Django permite que você se foque na parte boa 
+-- no ponto crucial de sua aplicação web -- facilitando alguns bits repetitivos. 
+Usando-o, ele fornece abstrações de alto nível de desenvolvimento web normalmente utilizados, 
+atalhos para tarefas frequentes de programação, e convenções claras de como resolver problemas.
+Ao mesmo tempo, Django tenta ficar fora do seu caminho, permitindo-o trabalhar fora do escopo como
+necessário.
 
-The goal of this book is to make you a Django expert. The focus is twofold.
-First, we explain, in depth, what Django does and how to build Web
-applications with it. Second, we discuss higher-level concepts where
-appropriate, answering the question "How can I apply these tools effectively
-in my own projects?" By reading this book, you'll learn the skills needed to
-develop powerful Web sites quickly, with code that is clean and easy to
-maintain.
+O objetivo desse livro é tornar você um expert em Django. O foco é duplo. Primeiro, 
+nós explicaremos, a fundo, o que o Django faz e como criar aplicações web com isso. 
+Segundo, nós discutiremos conceitos de nível superior quando apropriados, respondendo a questão 
+"Como eu posso aplicar essas ferramentas de efetivamente em meus projetos?" Lendo esse livro, 
+você aprenderá as habilidades necessárias para criar poderoros web sites rapidamente, 
+com código que seja limpo e fácil de se manter.
 
-What Is a Web Framework?
+O que é um framework web?
 ========================
 
-Django is a prominent member of a new generation of *Web frameworks* -- but
-what does that term mean, precisely?
+Django é proeminente membro de uma nova geração de frameworks web 
+-- mas o que esse termo significa, precisamente?
 
-To answer that question, let's consider the design of a Web application written
-in Python *without* a framework. Throughout this book, we'll take this approach
-of showing you basic ways of getting work done *without* shortcuts, in the hope
-that you'll recognize why shortcuts are so helpful. (It's also valuable to know
-how to get things done without shortcuts because shortcuts aren't always
-available. And most importantly, knowing *why* things work the way they do
-makes you a better Web developer.)
+Para responder essa questão, vamos considerar que o design de uma aplicação web 
+escrita em Python sem um framework. Ao longo desse livro, nós iremos através dessa 
+abordagem mostrar os caminhos básicos de fazer as coisas sem atalhos, na esperança 
+que você reconhecerá o porquê de atalhos serem tão úteis. (Será valioso saber como 
+ter as coisas feitas sem atalhos porque atalhos nem sempre poderão ser usados. 
+E o mais importante, saber como as coisas trabalham o torna um desenvolvedor web melhor.
 
-One of the simplest, most direct ways to build a Python Web app from scratch is
-to use the Common Gateway Interface (CGI) standard, which was a popular
-technique circa 1998. Here's a high-level explanation of how it works: just
-create a Python script that outputs HTML, then save the script to a Web server
-with a ".cgi" extension and visit the page in your Web browser. That's it.
+Uma das mais simples, mais diretas formas de criar uma aplicação Python do começo 
+é usar a Common Gateway Interface(CGI) padrão, que foi uma popular técnica em 1998. 
+Aqui está uma explicação alto-nível de como isso funciona: Apenas crie um script 
+Python que libere HTML, então salve o código em um web server com a extensão ".cgi" 
+e visite a página em seu navegador. É isso.
 
-Here's an example Python CGI script that displays the ten most recently
-published books from a database. Don't worry about syntax details; just get a
-feel for the basic things it's doing::
+Este é um exemplo de código de Python CGI que mostra os dez livros mais recentes 
+de uma base de dados. Não se preocupe com os detalhes da sintaxe; apenas sinta como funciona::
 
     #!/usr/bin/env python
 
@@ -69,57 +65,55 @@ feel for the basic things it's doing::
 
     connection.close()
 
-First, to fulfill the requirements of CGI, this code prints a "Content-Type"
-line, followed by a blank line. It prints some introductory HTML, connects to a
-database and runs a query to retrieve the names of the latest ten books.
-Looping over those books, it generates an HTML list of the titles. Finally, it
-prints the closing HTML and closes the database connection.
+Primeiro, para preencher os requerimentos do CGI, esse código exibe a linha "Content-Type",
+seguido por uma linha branca. Isto exibe algumas introduções de HTML, conectando a um banco
+de dados e funcionando uma busca para recuperar os nomes dos últimos 10 livros. Circulando 
+sobre esses livros, ele gera uma lista de títulos HTML. Finalmente, ele retorna o fechamento 
+do HTML e fecha a conexão com o banco de dados.
 
-With a one-off page like this one, the write-it-from-scratch approach isn't
-necessarily bad. For one thing, this code is simple to comprehend -- even a
-novice developer can read these 16 lines of Python and understand everything it
-does, from start to finish. There's nothing else to learn, no other code to
-read. It's also simple to deploy: just save this code in a file that ends with
-".cgi", upload that file to a Web server, and visit that page with a browser.
+Com uma simples página, o modo "escrevendo desde o início" não é necessáriamente ruim. Para 
+apenas uma coisa, esse código é simples para compreender -- mesmo um desenvolvedor novato 
+pode ler essas 15 linhas de Python e entender o que faz tudo, do começo ao final. Não há nada 
+mais para aprender, nenhum outro código a ler. E também fácil de lançar: apenas salve esse 
+código em um arquivo que termine com ".cgi", suba o arquivo em um servidor web, e visite a 
+página com um navegador.
 
-But despite its simplicity, this approach has a number of problems and
-annoyances. Ask yourself these questions:
+Mas apesar da simplicidade, essa abordagem contém uma série de contratempos e problemas. 
+Pergunte a si mesmo essas questões:
 
-* What happens when multiple parts of your application need to connect to
-  the database? Surely that database-connecting code shouldn't need to be
-  duplicated in each individual CGI script. The pragmatic thing to do would
-  be to refactor it into a shared function.
+* O que acontece quando múltiplas partes de sua aplicações precisarem conectar ao 
+seu banco de dados? Certamente que o código da conexão da base de dados não precisa 
+ser duplicado a cada código CGI. A forma pragmática de se fazer seria refatorá-lo 
+em uma função compartilhada.
 
-* Should a developer really have to worry about printing the
-  "Content-Type" line and remembering to close the database connection?
-  This sort of boilerplate reduces programmer productivity and introduces
-  opportunities for mistakes. These setup- and teardown-related tasks would
-  best be handled by some common infrastructure.
+* Deveria um desenvolvedor realmente se preocupar sobre exibir a linha "Content-Type" 
+e lembrando de fechá-la a conexão do banco de dados? Esses tipos de clichê reduzem a 
+produtividade do programador e introduz algumas oportunidades para erros. Este setup- 
+e tarefas desmontadas seriam melhores tratadas por algumas infra-estruturas comuns.
 
-* What happens when this code is reused in multiple environments, each with
-  a separate database and password? At this point, some
-  environment-specific configuration becomes essential.
+* O que acontece quando esse código é usado em diversos ambientes, cada um com uma base 
+de dados separada e senha? Nesse ponto, algumas configurações de ambientes específicos 
+se tornam essenciais.
 
-* What happens when a Web designer who has no experience coding Python
-  wishes to redesign the page? One wrong character could crash the entire
-  application. Ideally, the logic of the page -- the retrieval of book
-  titles from the database -- would be separate from the HTML display of
-  the page, so that a designer could edit the latter without affecting the
-  former.
+* O que acontece quando um Web designer que não tem nenhuma experiência em escrever 
+Python desejar redesenhar a página? Um simples caractere poderia quebrar a aplicação 
+inteira. Idealmente, a lógica dessa página -- a recuperação dos títulos dos livros 
+do banco de dados -- poderia ser separada da exibição HTML da página, então o designer
+poderia editar este sem afetar o último.
 
-These problems are precisely what a Web framework intends to solve. A Web
-framework provides a programming infrastructure for your applications, so that
-you can focus on writing clean, maintainable code without having to reinvent
-the wheel. In a nutshell, that's what Django does.
+Esses problemas são precisamente o que um framework web tende a resolver. Um framework 
+web fornece uma infraestrutura de programação para suas aplicações, então forcar em 
+escrever limpo, manutenível código sem reinventar a roda. Por cima, isso é o que o Django faz.
 
-The MVC Design Pattern
+
+Os padrões de projeto MVC
 ======================
 
-Let's dive in with a quick example that demonstrates the difference between the
-previous approach and a Web framework's approach. Here's how you might write
-the previous CGI code using Django. The first thing to note is that that we
-split it over four Python files (``models.py``, ``views.py``, ``urls.py``) and
-an HTML template (``latest_books.html``)::
+Vamos nos aprofundar com um rápido exemplo que demonstra a diferença entre a 
+abordagem antiga e a abordagem de um web framework. Aqui está como você deveria 
+escrever o código CGI usando Django. A primeira coisa a notar é que nós dividimos 
+em 4 arquivos Python(``models.py``, ``views.py``, ``urls.py``) e um HTML 
+template(``latest_books.html``)::
 
     # models.py (the database tables)
 
@@ -162,44 +156,46 @@ an HTML template (``latest_books.html``)::
     </ul>
     </body></html>
 
-Again, don't worry about the particulars of syntax; just get a feel for the
-overall design. The main thing to note here is the *separation of concerns*:
+Novamente, não se preocupe sobre as particularidades da sintaxe; apenas 
+pegue a ideia de como é o design. A principal coisa a notar aqui é a *separação 
+de interesses*:
 
-* The ``models.py`` file contains a description of the database table,
-  represented by a Python class. This class is called a *model*. Using it,
-  you can create, retrieve, update and delete records in your database
-  using simple Python code rather than writing repetitive SQL statements.
+* O arquivo ``models.py`` contém a descrição da tabela do banco de dados, 
+representado por uma classe Python. Essa classe é chamada de *model*. 
+Usando isso, você pode criar, recuperar, atualizar e deletar gravações 
+em sua base de dados usando um simples código melhor do que escrever 
+repetitivos SQL's.
 
-* The ``views.py`` file contains the business logic for the page. The
-  ``latest_books()`` function is called a *view*.
+* O arquivo ``views.py`` contém a lógica de negócio da página. A função 
+``latest_books()`` é chamada de *view*.
 
-* The ``urls.py`` file specifies which view is called for a given URL
-  pattern. In this case, the URL ``/latest/`` will be handled by the
-  ``latest_books()`` function. In other words, if your domain is
-  example.com, any visit to the URL http://example.com/latest/ will call
-  the ``latest_books()`` function.
+* O arquivo ``urls.py`` especifica qual view é chamada quando for dada 
+uma amostra de URL. Nesse caso, a URL ``/latest/`` será manipulada pela 
+função ``latest_books()``. Em outras palavras, se seu domínio é example.com, 
+qualquer visita a URL http://example.com/latest/ será chamada a função 
+``latest_books()``.
 
-* The ``latest_books.html`` file is an HTML template that describes the
-  design of the page. It uses a template language with basic logic
-  statements -- e.g., ``{% for book in book_list %}``.
+* O arquivo ``latest_books.html`` é um HTML template que descreve o design da 
+página. Isso usa uma linguagem de template com a lógica básica 
+-- e.g. ``{% for book in book_list %}``.
 
-Taken together, these pieces loosely follow a pattern called
-Model-View-Controller (MVC). Simply put, MVC is way of developing software so
-that the code for defining and accessing data (the model) is separate from
-request-routing logic (the controller), which in turn is separate from the user
-interface (the view). (We'll discuss MVC in more depth in Chapter 5.)
+Tendo-os juntos, essas peças formam o padrão chamado Model-View-Controller(MVC). 
+Simples mas, MVC é um caminho de desenvolvimento de software que o código de 
+definição e acesso de dados(o model) é separado da lógica de requisito de rotas
+(o controller), que por sinal separado da interface do usuário(the view). 
+(Nós iremos discutir MVC mais afundo no capítulo 5.)
 
-A key advantage of such an approach is that components are *loosely coupled*.
-Each distinct piece of a Django-powered Web application has a single key
-purpose and can be changed independently without affecting the other pieces.
-For example, a developer can change the URL for a given part of the application
-without affecting the underlying implementation. A designer can change a page's
-HTML without having to touch the Python code that renders it. A database
-administrator can rename a database table and specify the change in a single
-place, rather than having to search and replace through a dozen files.
+A vantagem chave dessa forma são os componentes que são *fracamente aclopados*. 
+Cada distinta peça de uma aplicação feita em Django teve uma simples proposta 
+chave e pode ser mudada independente sem afetar as outras peças. Por exemplo, 
+o desenvolvedor pode mudar a URL para outra parte da aplicação sem afetar a 
+implementação subjacente. Um designer pode mudar a página HTML sem ter que 
+tocar o código Python que o renderiza. O administrador do banco de dados pode 
+renomear uma tabela da banco de dados e especificar a mudança em um simples local, 
+melhor que ter que procurar e substituir através de diversos arquivos.
 
-In this book, each component of MVC gets its own chapter. Chapter 3 covers
-views, Chapter 4 covers templates, and Chapter 5 covers models.
+Nesse livro, cada componente do MVC tem seu próprio capítulo. Capítulo 3 cobre
+as views, capítulo 4 cobre os templates, e o capítulo 5 cobre os models.
 
 Django's History
 ================
