@@ -31,7 +31,7 @@ continue lendo mesmo se você seja um novato em base de dados. Você provavelmen
 será capaz de acompanhar e compreender os conceitos com base no contexto.)
 
 A forma "Burra" para fazer consultas de banco de dados em views
-==================================================================
+===============================================================
 
 Assim como no Capítulo 3 detalhamos a maneira "burra" de produzir 
 saídas dentro da view (com código fixo e texto diretamente dentro da view), a uma 
@@ -86,14 +86,14 @@ usando a API de banco de dados do Django::
         books = Book.objects.order_by('name')
         return render(request, 'book_list.html', {'books': books})
 
-Vamos explana esse código um pouco mais tarde no capítulo. Por agora, basta 
+Vamos explanar esse código um pouco mais tarde no capítulo. Por agora, basta 
 ter uma idéia de como fica.
 
-The MTV (or MVC) Development Pattern
-====================================
+O padrão de desenvolvimento MTV(ou MVC)
+=======================================
 
-Before we delve into any more code, let's take a moment to consider the overall
-design of a database-driven Django Web application.
+Antes de entrar-mos em mais código, vamos tirar um tempo para considerar todo o
+design de uma aplicação web Django derigida a banco de dados.
 
 As we mentioned in previous chapters, Django is designed to encourage loose
 coupling and strict separation between pieces of an application. If you follow
