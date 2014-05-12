@@ -95,13 +95,13 @@ O padrão de desenvolvimento MTV(ou MVC)
 Antes de entrar-mos em mais código, vamos tirar um tempo para considerar todo o
 design de uma aplicação web Django derigida a banco de dados.
 
-As we mentioned in previous chapters, Django is designed to encourage loose
-coupling and strict separation between pieces of an application. If you follow
-this philosophy, it's easy to make changes to one particular piece of the
-application without affecting the other pieces. In view functions, for
-instance, we discussed the importance of separating the business logic from the
-presentation logic by using a template system. With the database layer, we're
-applying that same philosophy to data access logic.
+Como mencionamos em capítulos anteriores, o Django é projetado para encorajar 
+o baixo acoplamento e separação estrita entre partes de uma aplicação. Se você 
+seguir essa filosofia, é fácil de realizar modificações em uma parte particular 
+da aplicação sem afetar outras partes. Em view-fuctions, por exemplo, discutimos 
+a importância da separação da lógica de negócio da lógica de apresentação, usando 
+um sistema de templates. Com a camada de banco de dados, estamos aplicando essa mesma 
+filosofia para a lógica de acesso a dados.
 
 Those three pieces together -- data access logic, business logic, and
 presentation logic -- comprise a concept that's sometimes called the
