@@ -103,13 +103,13 @@ a importância da separação da lógica de negócio da lógica de apresentaçã
 um sistema de templates. Com a camada de banco de dados, estamos aplicando essa mesma 
 filosofia para a lógica de acesso a dados.
 
-Those three pieces together -- data access logic, business logic, and
-presentation logic -- comprise a concept that's sometimes called the
-*Model-View-Controller* (MVC) pattern of software architecture. In this
-pattern, "Model" refers to the data access layer, "View" refers to the part of
-the system that selects what to display and how to display it, and
-"Controller" refers to the part of the system that decides which view to use,
-depending on user input, accessing the model as needed.
+Esses três pedaços juntos -- lógica de acesso a dados, lógica de negócios e 
+lógica de apresentação -- compreendem um conceito que geralmente é chamado 
+de padrão *Modelo-Visão-Controle* (MVC) de arquitetura de software. Nesse 
+padrão, "Modelo" refere-se ao camada de acesso a dados, "Visão" refere-se a 
+parte do sistema que seleciona o que exibir e como deve exibi-lo e o 
+"Controle" refere-se a parte do sistema que decide que visão usar, dependendo 
+com a entrada do usuário, acessando o modelo se necessário.
 
 .. admonition:: Why the Acronym?
 
