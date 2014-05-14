@@ -111,14 +111,13 @@ parte do sistema que seleciona o que exibir e como deve exibi-lo e o
 "Controle" refere-se a parte do sistema que decide que visão usar, dependendo 
 com a entrada do usuário, acessando o modelo se necessário.
 
-.. admonition:: Why the Acronym?
-
-    The goal of explicitly defining patterns such as MVC is mostly to
-    streamline communication among developers. Instead of having to tell your
-    coworkers, "Let's make an abstraction of the data access, then let's have a
-    separate layer that handles data display, and let's put a layer in the
-    middle that regulates this," you can take advantage of a shared vocabulary
-    and say, "Let's use the MVC pattern here."
+.. admonition:: Por que o acrônimo?
+    O objetivo de definir explicitamente um padrão como MVC é principalmente 
+    para agilizar a comunicação entre os desenvolvedores. Ao invés de ter que 
+    dizer ao seu colega de trabalho "Vamos fazer uma abstração do acesso a dados, 
+    então vamos ter uma camada separada que lida com a exibição de dados e vamos 
+    colocar uma camada no meio que controla isso", você pode tirar vantagem de 
+    um vocabulário compartilhado e dizer, "Vamos usar o padrão MVC aqui".
 
 Django follows this MVC pattern closely enough that it can be called an MVC
 framework. Here's roughly how the M, V, and C break down in Django:
