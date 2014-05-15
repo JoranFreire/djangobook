@@ -119,18 +119,18 @@ com a entrada do usuário, acessando o modelo se necessário.
     colocar uma camada no meio que controla isso", você pode tirar vantagem de 
     um vocabulário compartilhado e dizer, "Vamos usar o padrão MVC aqui".
 
-Django follows this MVC pattern closely enough that it can be called an MVC
-framework. Here's roughly how the M, V, and C break down in Django:
+Django segue o padrão MVC próximo o suficiente para que possa ser chamado de
+framework MVC. Aqui é como o M, V, C é quebrado no Django:
 
-* *M*, the data-access portion, is handled by Django's database layer,
-  which is described in this chapter.
+* *M*, a porção de acesso a dados, é tratado pela camada de base de dados 
+  do Django, que é descrita nesse capítulo.
 
-* *V*, the portion that selects which data to display and how to display
-  it, is handled by views and templates.
+* *V*, é a parte que seleciona quais dados exibir e como deve exibir eles, 
+  é tratado pela visão e templates.
 
-* *C*, the portion that delegates to a view depending on user input, is
-  handled by the framework itself by following your URLconf and calling the
-  appropriate Python function for the given URL.
+* *C*, é a parte que delega para uma visão dependendo da entrada do usuário, 
+  é tratado pelo própro framewok, seguindo sua URLConf e chamando as funções 
+  Python apropriadas para a url informada.
 
 Because the "C" is handled by the framework itself and most of the excitement
 in Django happens in models, templates and views, Django has been referred to
