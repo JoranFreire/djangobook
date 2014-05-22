@@ -132,9 +132,9 @@ framework MVC. Aqui é como o M, V, C é quebrado no Django:
   é tratado pelo própro framewok, seguindo sua URLConf e chamando as funções 
   Python apropriadas para a url informada.
 
-Because the "C" is handled by the framework itself and most of the excitement
-in Django happens in models, templates and views, Django has been referred to
-as an *MTV framework*. In the MTV development pattern,
+Uma vez que o "C" é manipulado pelo próprio framework e maior parte da emoção 
+no Django acontece nos modelos, templates e visão, Django tem sido referido como um 
+*framework MTV*. No padrão de desenvolvimento MTV,
 
 * *M* stands for "Model," the data access layer. This layer contains
   anything and everything about the data: how to access it, how to validate
