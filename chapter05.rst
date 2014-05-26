@@ -136,17 +136,17 @@ Uma vez que o "C" é manipulado pelo próprio framework e maior parte da emoçã
 no Django acontece nos modelos, templates e visão, Django tem sido referido como um 
 *framework MTV*. No padrão de desenvolvimento MTV,
 
-* *M* stands for "Model," the data access layer. This layer contains
-  anything and everything about the data: how to access it, how to validate
-  it, which behaviors it has, and the relationships between the data.
-
-* *T* stands for "Template," the presentation layer. This layer contains
-  presentation-related decisions: how something should be displayed on a
-  Web page or other type of document.
-
-* *V* stands for "View," the business logic layer. This layer contains the
-  logic that access the model and defers to the appropriate template(s).
-  You can think of it as the bridge between models and templates.
+* *M* significa "Modelo", a camada de acesso a dados. Essa camada contém
+  qualquer coisa e também tudo sobre os dados: como acessá-los, como 
+  válida-los, que comportamentos eles possuem e o relacionamento entre os dados.
+  
+* *T* siginifica "Template", a camada de apresentação; Essa camada contém 
+  decisões relacionadas a apresentação: como algo deve ser exibido em uma 
+  página Web ou outro tipo de documento.
+  
+* *V* significa "Visão", a camada de lógica de negócios. Essa camada contém 
+  a lógica que acessa o modelo e retorna para o(s) template(s) apropriados. 
+  Você pode pensar nisso como uma ponte entre modelos e templates.
 
 If you're familiar with other MVC Web-development frameworks, such as Ruby on
 Rails, you may consider Django views to be the "controllers" and Django
