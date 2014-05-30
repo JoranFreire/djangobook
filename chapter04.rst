@@ -3,7 +3,7 @@ Capítulo 4: Templates
 ====================
 
 No capítulo anterior, você deve ter notado algo peculiar em como nós retornamos
-o texto em nossos exemplos de views. Isto é, o HTML foi codificado diretamente
+o texto em nossos exemplos de visão. Isto é, o HTML foi codificado diretamente
 em nosso código Python, tal como::
 
     def current_datetime(request):
@@ -11,9 +11,9 @@ em nosso código Python, tal como::
         html = "<html><body>It is now %s.</body></html>" % now
         return HttpResponse(html)
 
-Embora essa técnica seja conveniente para o propósito de demonstrar como as views
-trabalham, não é uma boa idéia codificar HTML diretamente em suas views.
-Aqui está o por que:
+Embora essa técnica seja conveniente para o propósito de demonstrar como a camada 
+de visão trabalha, não é uma boa idéia codificar HTML diretamente em sua camada 
+de visão. Aqui está o por que:
 
 * Qualquer modificação no design da página requer modificação no código Python.
   O design de um site tende a mudar com mais freqüência do que o código Python
