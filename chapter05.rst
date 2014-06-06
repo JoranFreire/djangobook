@@ -161,8 +161,8 @@ data looks, not *which* data is presented.
 Neither interpretation is more "correct" than the other. The important thing is
 to understand the underlying concepts.
 
-Configuring the Database
-========================
+Configurando a base de dados
+============================
 
 With all of that philosophy in mind, let's start exploring Django's database
 layer. First, we need to take care of some initial configuration; we need to
