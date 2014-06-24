@@ -148,18 +148,18 @@ no Django acontece nos modelos, templates e visão, Django tem sido referido com
   a lógica que acessa o modelo e retorna para o(s) template(s) apropriados. 
   Você pode pensar nisso como uma ponte entre modelos e templates.
 
-If you're familiar with other MVC Web-development frameworks, such as Ruby on
-Rails, you may consider Django views to be the "controllers" and Django
-templates to be the "views." This is an unfortunate confusion brought about by
-differing interpretations of MVC. In Django's interpretation of MVC, the "view"
-describes the data that gets presented to the user; it's not necessarily just
-*how* the data looks, but *which* data is presented. In contrast, Ruby on Rails
-and similar frameworks suggest that the controller's job includes deciding
-which data gets presented to the user, whereas the view is strictly *how* the
-data looks, not *which* data is presented.
+Se você está familiarizado com outros frameworks MVC para desenvolvimento web, 
+como Ruby on Rails, você deve considerar as views do Django como sendo 
+os "controllers" e os templates Django como sendo as "views". Isso é uma confusão 
+inevitável causada devido as diferentes interpretações sobre o MVC. Na interpretação 
+sobre o MVC do Django, a "view" descreve os dados que são apresentados ao usuário. 
+Não é necessáriamente apenas *como* os dados caracterizam-se, mas *que* dados são 
+apresentados. Em contraste, Ruby on Rails e frameworks similares sugerem que o 
+trabalho do controlador inclua decisões de quais dados devem ser apresentados ao 
+usuário, ao passo que a visão é estritamente *que* dados devem ser apresentados.
 
-Neither interpretation is more "correct" than the other. The important thing is
-to understand the underlying concepts.
+Nenhuma interpretação é mais "correta" que a outra. O ponto importante é compreender 
+os conceitos subjacentes.
 
 Configurando a base de dados
 ============================
