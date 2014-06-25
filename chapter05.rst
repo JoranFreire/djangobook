@@ -164,9 +164,10 @@ os conceitos subjacentes.
 Configurando a base de dados
 ============================
 
-With all of that philosophy in mind, let's start exploring Django's database
-layer. First, we need to take care of some initial configuration; we need to
-tell Django which database server to use and how to connect to it.
+Com toda essa filosofia em mente, vamos iniciar a explorar a camada de base 
+de dados do Django. Primeiro, devemos cuidar de algumas configurações iniciais.
+Precisamos dizer ao Django qual servidor de banco de dados usar e como conectar-se 
+a ele.
 
 We'll assume you've set up a database server, activated it, and created a
 database within it (e.g., using a ``CREATE DATABASE`` statement). If you're
