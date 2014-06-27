@@ -169,14 +169,14 @@ de dados do Django. Primeiro, devemos cuidar de algumas configurações iniciais
 Precisamos dizer ao Django qual servidor de banco de dados usar e como conectar-se 
 a ele.
 
-We'll assume you've set up a database server, activated it, and created a
-database within it (e.g., using a ``CREATE DATABASE`` statement). If you're
-using SQLite, no such setup is required, because SQLite uses standalone files
-on the filesystem to store its data.
+Vamos assumir que você tenha criado um servidor de banco de dados, ativado e 
+criada a base de dados dentro dele (usando um comando ``CREATE DATABASE``). 
+Se você estiver usando SQLite, nenhuma configuração é necessária, pois o 
+SQLite usa arquivos autônomos no sistema de arquivos para armazenar seus dados.
 
-As with ``TEMPLATE_DIRS`` in the previous chapter, database configuration lives in
-the Django settings file, called ``settings.py`` by default. Edit that file and
-look for the database settings::
+Assim como ``TEMPLATE_DIRS`` no capítulo anterior, a configuração de base de dados 
+reside no arquivo de configuração do Django, chamadao de ``settings.py`` por padrão. 
+Edite esse arquivo e procure pela configuração de banco de dados::
 
     DATABASES = {
         'default': {
