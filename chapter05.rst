@@ -189,9 +189,9 @@ Edite esse arquivo e procure pela configuração de banco de dados::
         }
     }
 
-Here's a rundown of each setting.
+Aqui está um resumo de cada configuração.
 
-* ``ENGINE`` tells Django which database engine to use. If you're
+* ``ENGINE`` diz ao Django qual engine de banco de dados usar. If you're
   using a database with Django, ``ENGINE`` must be set to one of
   the strings shown in Table 5-1.
 
