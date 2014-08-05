@@ -197,28 +197,27 @@ melhor que ter que procurar e substituir através de diversos arquivos.
 Nesse livro, cada componente do MVC tem seu próprio capítulo. Capítulo 3 cobre
 as views, capítulo 4 cobre os templates, e o capítulo 5 cobre os models.
 
-Django's History
+História do Django
 ================
 
-Before we dive into more code, we should take a moment to explain Django's
-history. We noted above that we'll be showing you how to do things *without*
-shortcuts so that you more fully understand the shortcuts. Similarly, it's
-useful to understand *why* Django was created, because knowledge of the history
-will put into context why Django works the way it does.
+Antes de mergulharmos em mais código, devemos ter um momento para explicar a história do Django. 
+Já mencionamos que iremos mostrar a você como fazer as coisas sem atalhos para que você tenha maior 
+compreensão sobre os atalhos. Igualmente, é muito útil entender porque Django foi criado, conhecendo
+a história irá colocar você no contexto de como o Django trabalha e da maneira que ele faz.
 
-If you've been building Web applications for a while, you're probably familiar
-with the problems in the CGI example we presented earlier. The classic Web
-developer's path goes something like this:
+Se você já esteve criando aplicações web por um tempo, provavelmente está familiarizado com os problemas
+que foram apresentados anteriormente no exemplo CGI. O caminho clássico do desenvolvimento web é assim:
 
-1. Write a Web application from scratch.
-2. Write another Web application from scratch.
-3. Realize the application from step 1 shares much in common with the
-   application from step 2.
-4. Refactor the code so that application 1 shares code with application 2.
-5. Repeat steps 2-4 several times.
-6. Realize you've invented a framework.
 
-This is precisely how Django itself was created!
+1. Escrever uma aplicação web desde o começo.
+2. Escrever outra aplicação web desde o começo.
+3. Se dar conta que a aplicação do primeiro exemplo tem muito em comum com a 
+   aplicação do segundo exemplo.
+4. Refatorar o código para que a aplicação 1 compartilhe o código com a aplicação 2.
+5. Repetir os passos 2-4 algumas vezes.
+6. Se dar conta que você criou um framework.
+
+Isto é precisamente como o Django foi criado!
 
 Django grew organically from real-world applications written by a Web
 development team in Lawrence, Kansas, USA. It was born in the fall of 2003,
