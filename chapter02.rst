@@ -1,94 +1,94 @@
 ======================
-Capítulo 2: Começando
+CapÃ­tulo 2: ComeÃ§ando
 ======================
 
-Instalar o Django é um processo de vários passos, em função das múltiplas partes que
-envolve os cenários de desenvolvimento web hoje em dia. Neste capítulo, vamos leva-los através de 
+Instalar o Django Ã© um processo de vÃ¡rios passos, em funÃ§Ã£o das mÃºltiplas partes que
+envolve os cenÃ¡rios de desenvolvimento web hoje em dia. Neste capÃ­tulo, vamos leva-los atravÃ©s de 
 como se instalar o framework e as suas dependencias.
 
-Como o Django é "apenas" código Python, ele é executado em qualquer lugar que rode Python -- incluindo
-alguns telefones celulares! Mas este capítulo abrange apenas os cenários comums para se 
-instalar o Django. Vamos assumir que você esteje instalando em uma máquina desktop/laptop ou um servidor.
+Como o Django Ã© "apenas" cÃ³digo Python, ele Ã© executado em qualquer lugar que rode Python -- incluindo
+alguns telefones celulares! Mas este capÃ­tulo abrange apenas os cenÃ¡rios comums para se 
+instalar o Django. Vamos assumir que vocÃª esteje instalando em uma mÃ¡quina desktop/laptop ou um servidor.
 
-Depois, no Capítulo 12, nós iremos cobrir como fazer o deploy do Django para um site em produção.
+Depois, no CapÃ­tulo 12, nÃ³s iremos cobrir como fazer o deploy do Django para um site em produÃ§Ã£o.
 
 Instalando o Django
 ====================
 
-Django é puramente escrito em Python, então o primeiro passo para instalar o 
-framework é ter certeza de que você tem o Python instalado.
+Django Ã© puramente escrito em Python, entÃ£o o primeiro passo para instalar o 
+framework Ã© ter certeza de que vocÃª tem o Python instalado.
 
-Versões do Python
+VersÃµes do Python
 ------------------
 
-O núcleo do framework Django (versão 1.4) trabalha com qualquer versão do Python da 2.5
-até a 2.7. O GIS(Geographic Information Systems) do Django exige o Python 2.5 até o 2.7.
+O nÃºcleo do framework Django (versÃ£o 1.4) trabalha com qualquer versÃ£o do Python da 2.5
+atÃ© a 2.7. O GIS(Geographic Information Systems) do Django exige o Python 2.5 atÃ© o 2.7.
 
-Se você não tem certeza da versão do Python que que tem instalada e você tem
-completa liberdade para tomar essa decisão, escolha a última versão da série 2.x: versão 2.7.
-Embora Django funcione igualmente bem com qualquer versão 2.5 até 2.7, a ultima 
-versão do Python tem boa performace de desempenho e idiomas adicionais
-características que talvez você deseje ultilizar em suas aplicações. Além disso, 
-add-ons de terceiros que você possa querer ultilizar talvez nescessite da mais recente que 
-o Python 2.5, então ultilize a ultima versnao do Python mantendo o leque de opções em aberto.
+Se vocÃª nÃ£o tem certeza da versÃ£o do Python que que tem instalada e vocÃª tem
+completa liberdade para tomar essa decisÃ£o, escolha a Ãºltima versÃ£o da sÃ©rie 2.x: versÃ£o 2.7.
+Embora Django funcione igualmente bem com qualquer versÃ£o 2.5 atÃ© 2.7, a ultima 
+versÃ£o do Python tem boa performace de desempenho e idiomas adicionais
+caracterÃ­sticas que talvez vocÃª deseje ultilizar em suas aplicaÃ§Ãµes. AlÃ©m disso, 
+add-ons de terceiros que vocÃª possa querer ultilizar talvez nescessite da mais recente que 
+o Python 2.5, entÃ£o ultilize a ultima versnao do Python mantendo o leque de opÃ§Ãµes em aberto.
 
 .. admonition:: Django and Python 3.0
 
-    No momento em que este livro estava sendo escrito, o Python 3.0 estava sendo lançado, mas Django
+    No momento em que este livro estava sendo escrito, o Python 3.0 estava sendo lanÃ§ado, mas Django
     foi testado apenas de experimentalmente. Python 3.0 intruduziu a 
-    um número substancial de incompatibilidades com as versões anteriores, mundando 
+    um nÃºmero substancial de incompatibilidades com as versÃµes anteriores, mundando 
     a si mesmo, e, como resultado, muita das principais bibliotecas Python e
-    frameworks, incluindo Django, ainda não tinha pego.
+    frameworks, incluindo Django, ainda nÃ£o tinha pego.
 
-    Django 1.5 dará suporte para o Python 2.6, 2.7, e 3.2. Entretando,
-    suporte para o Python 3.2 é considerado um "preview", o que significa que
-    os desenvolvedores Django não estão confiantes o suficiente para prometer
-    estabilidade da produção. Para isso sugiro que você espere até a versão do Django 1.6 
+    Django 1.5 darÃ¡ suporte para o Python 2.6, 2.7, e 3.2. Entretando,
+    suporte para o Python 3.2 Ã© considerado um "preview", o que significa que
+    os desenvolvedores Django nÃ£o estÃ£o confiantes o suficiente para prometer
+    estabilidade da produÃ§Ã£o. Para isso sugiro que vocÃª espere atÃ© a versÃ£o do Django 1.6 
 
-Instalação
+InstalaÃ§Ã£o
 -----------
 
-Se você estiver no Linux ou no Mac OS X, você provavelmente tem o Python instalado.
+Se vocÃª estiver no Linux ou no Mac OS X, vocÃª provavelmente tem o Python instalado.
 Escreva ``python`` no prompt de comando (ou em Applications/Utilities/Terminal, no Mac OS X).
-Se você vê algo como isso, é porque o Python está instalado::
+Se vocÃª vÃª algo como isso, Ã© porque o Python estÃ¡ instalado::
 
     Python 2.7.3rc2 (default, Apr 22 2012, 22:30:17)
     [GCC 4.6.3] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
 
-Caso contrário, você prescisa fazer o download e instalar o Python. Isso é fácil e rápido
-instruções detalhadas poderão ser encontradas em http://www.python.org/download/
+Caso contrÃ¡rio, vocÃª prescisa fazer o download e instalar o Python. Isso Ã© fÃ¡cil e rÃ¡pido
+instruÃ§Ãµes detalhadas poderÃ£o ser encontradas em http://www.python.org/download/
 
 Instalando Django
 =================
 
-Em um determinado momento, duas dinstintas versões dinstintas do Django estão disponíveis para você:
-a última versão oficial e a versão de desenvolvimento. A versão que você decidir instalar 
-depende das suas prioridades. Se você quer uma versão testada e estável, ou se você quer uma
-versão contendo os recursos mais recentes. Talvez você possa contribuir para o Django, á custa de
+Em um determinado momento, duas dinstintas versÃµes dinstintas do Django estÃ£o disponÃ­veis para vocÃª:
+a Ãºltima versÃ£o oficial e a versÃ£o de desenvolvimento. A versÃ£o que vocÃª decidir instalar 
+depende das suas prioridades. Se vocÃª quer uma versÃ£o testada e estÃ¡vel, ou se vocÃª quer uma
+versÃ£o contendo os recursos mais recentes. Talvez vocÃª possa contribuir para o Django, Ã¡ custa de
 estabilidade?
 
-Nós recomendamos trabalhar com um lançamento oficial, mas é importante saber que a versão 
-de desenvolvimento existe, porque você irá encontrar menções na documentação e pelos 
+NÃ³s recomendamos trabalhar com um lanÃ§amento oficial, mas Ã© importante saber que a versÃ£o 
+de desenvolvimento existe, porque vocÃª irÃ¡ encontrar menÃ§Ãµes na documentaÃ§Ã£o e pelos 
 membros da comunidade.
 
-Instalando um lançamento oficial
+Instalando um lanÃ§amento oficial
 ------------------------------
 
-Um lançamento oficial tem um número de versão, como 1.4.2, 1.4.1 ou 1.4, 
-um lançamento não oficial tem um número de versão, como 1.4.2, 1.4.1 ou 1.4, e a última 
-estará sempre disponível em http://www.djangoproject.com/download/.
+Um lanÃ§amento oficial tem um nÃºmero de versÃ£o, como 1.4.2, 1.4.1 ou 1.4, 
+um lanÃ§amento nÃ£o oficial tem um nÃºmero de versÃ£o, como 1.4.2, 1.4.1 ou 1.4, e a Ãºltima 
+estarÃ¡ sempre disponÃ­vel em http://www.djangoproject.com/download/.
 
-Se você está em uma distribuição Linux que inclui um pacote do Django, é uma boa ideia
-usar a versão do distribuidor. Dessa forma você terá atualizações de segurança juntamente com
+Se vocÃª estÃ¡ em uma distribuiÃ§Ã£o Linux que inclui um pacote do Django, Ã© uma boa ideia
+usar a versÃ£o do distribuidor. Dessa forma vocÃª terÃ¡ atualizaÃ§Ãµes de seguranÃ§a juntamente com
 o resto dos pacotes do seu sistema.
 
-Se você não tem acesso a uma versão pré-empacotada, você pode fazer o download e instalar
-o framework manualmente. Para isso, primeiramente faça o do tarball, que será chamado
-de algo como ``Django-1.4.2.tar.gz``. (Não importa em qual diretório local você tenha baixado
-este arquivo inicial; O processo de instalação colocará os arquivos do Django no lugar correto.) 
-Então, descompacte-o e e execute ``setup.py install``, como você faz com a maioria das bibliotecas
+Se vocÃª nÃ£o tem acesso a uma versÃ£o prÃ©-empacotada, vocÃª pode fazer o download e instalar
+o framework manualmente. Para isso, primeiramente faÃ§a o do tarball, que serÃ¡ chamado
+de algo como ``Django-1.4.2.tar.gz``. (NÃ£o importa em qual diretÃ³rio local vocÃª tenha baixado
+este arquivo inicial; O processo de instalaÃ§Ã£o colocarÃ¡ os arquivos do Django no lugar correto.) 
+EntÃ£o, descompacte-o e e execute ``setup.py install``, como vocÃª faz com a maioria das bibliotecas
 do Python.
 
 Veja como esse processo se parece em sistemas Unix:
@@ -97,92 +97,92 @@ Veja como esse processo se parece em sistemas Unix:
 #. ``cd Django-*``
 #. ``sudo python setup.py install``
 
-No Windows, nós recomendamos o uso do 7-Zip (http://www.djangoproject.com/r/7zip/)
+No Windows, nÃ³s recomendamos o uso do 7-Zip (http://www.djangoproject.com/r/7zip/)
 para descomprimir os arquivos ``.tar.gz``. Uma vez com os arquivos descompactados, inicie o DOS
-shell (o "Prompt de Comando") com os privilégios de administrador e execute o comando seguinte 
-dentro do diretório cujo nome começa com ``Django-``::
+shell (o "Prompt de Comando") com os privilÃ©gios de administrador e execute o comando seguinte 
+dentro do diretÃ³rio cujo nome comeÃ§a com ``Django-``::
 
     python setup.py install
 
-No caso de você estiver curioso: os arquivos do Django serão instalados no local da
-instalação do seu Python no ``site-packages`` diretório -- um diretório aonde o o Python
-procura por biblioteca de terceiros. Normalmente é um lugar como ``/usr/lib/python2.7/site-packages``.
+No caso de vocÃª estiver curioso: os arquivos do Django serÃ£o instalados no local da
+instalaÃ§Ã£o do seu Python no ``site-packages`` diretÃ³rio -- um diretÃ³rio aonde o o Python
+procura por biblioteca de terceiros. Normalmente Ã© um lugar como ``/usr/lib/python2.7/site-packages``.
 
-Instalando a versão de "Desenvolvimento"
+Instalando a versÃ£o de "Desenvolvimento"
 ----------------------------------------
 
-Django ultiliza o Git (http://git-scm.com) para o controle de versão. A mais
-recente e maior versão de desenvolvimento do Django se encontra no seu oficial 
-repositório do Git (https://github.com/django/django). Você deve considerar a 
-instalação dessa versão se você quer trabalhar on the bleeding edge, ou se você quiser 
-contribuir com o código do Django.
+Django ultiliza o Git (http://git-scm.com) para o controle de versÃ£o. A mais
+recente e maior versÃ£o de desenvolvimento do Django se encontra no seu oficial 
+repositÃ³rio do Git (https://github.com/django/django). VocÃª deve considerar a 
+instalaÃ§Ã£o dessa versÃ£o se vocÃª quer trabalhar on the bleeding edge, ou se vocÃª quiser 
+contribuir com o cÃ³digo do Django.
 
-Git é gratuíto, um uma distribuição de código live de revisão de controle de sistema, e o
-time do Django usa ele para controlar as mudanças no código fonte do Django. Você pode fazer
-o download e instalar o Git no http://git-scm.com/download, mas é mas fácil instalar com
-o controlador de pacots do seu sistema operacional. Você pode usar o Git para pegar a mais 
-recente versão dos códigos do Django e, a qualquer momento, você pode atualizar os códigos 
-da sua versão local do Django para obter as últimas alterações feitas pelos os desenvolvedores
+Git Ã© gratuÃ­to, um uma distribuiÃ§Ã£o de cÃ³digo live de revisÃ£o de controle de sistema, e o
+time do Django usa ele para controlar as mudanÃ§as no cÃ³digo fonte do Django. VocÃª pode fazer
+o download e instalar o Git no http://git-scm.com/download, mas Ã© mas fÃ¡cil instalar com
+o controlador de pacots do seu sistema operacional. VocÃª pode usar o Git para pegar a mais 
+recente versÃ£o dos cÃ³digos do Django e, a qualquer momento, vocÃª pode atualizar os cÃ³digos 
+da sua versÃ£o local do Django para obter as Ãºltimas alteraÃ§Ãµes feitas pelos os desenvolvedores
 Django.
 
-Ao usar a versão de desenvolvimento, tenha em mente que não há coisas como garantias de que
-não será quebrada a qualquer momento. Como dito, alguns membros do time do Django executa sites
-de produção em versões de desenvolvimento, para que eles tenham um incentivo de mantê-los estáveis.
+Ao usar a versÃ£o de desenvolvimento, tenha em mente que nÃ£o hÃ¡ coisas como garantias de que
+nÃ£o serÃ¡ quebrada a qualquer momento. Como dito, alguns membros do time do Django executa sites
+de produÃ§Ã£o em versÃµes de desenvolvimento, para que eles tenham um incentivo de mantÃª-los estÃ¡veis.
 
-Para pegar a última versão do Django, siga esses passos:
+Para pegar a Ãºltima versÃ£o do Django, siga esses passos:
 
-#. Tenha certeza que você tenha o Git instalado. Você pode pegá-lo gratuitamente em http://git-scm.com/,
-e você pode achar a excelente documentação em http://git-scm.com/documentation.
+#. Tenha certeza que vocÃª tenha o Git instalado. VocÃª pode pegÃ¡-lo gratuitamente em http://git-scm.com/,
+e vocÃª pode achar a excelente documentaÃ§Ã£o em http://git-scm.com/documentation.
 
-#. Clone o repositório usando o seguinte comando ``git clone https://github.com/django/django djmaster``
+#. Clone o repositÃ³rio usando o seguinte comando ``git clone https://github.com/django/django djmaster``
 
-#. Localize na instalação do Python o diretório ``site-packages``. Normalmente
-   fica localizada em um lugar como ``/usr/lib/python2.7/site-packages``. Se você não faz idéia,
+#. Localize na instalaÃ§Ã£o do Python o diretÃ³rio ``site-packages``. Normalmente
+   fica localizada em um lugar como ``/usr/lib/python2.7/site-packages``. Se vocÃª nÃ£o faz idÃ©ia,
    escreva isso no prompt de comando::
 
        python -c 'import sys, pprint; pprint.pprint(sys.path)'
 
-    A saída resultante deverá incluir o diretório do seu ``site-packages``.
+    A saÃ­da resultante deverÃ¡ incluir o diretÃ³rio do seu ``site-packages``.
 
-#. Dentro do diretório ``site-packages``, crie um arquivo chamado ``djmaster.pth``
-  e edite ele para conter o caminho completo para o seu diretório ``djmaster``.
+#. Dentro do diretÃ³rio ``site-packages``, crie um arquivo chamado ``djmaster.pth``
+  e edite ele para conter o caminho completo para o seu diretÃ³rio ``djmaster``.
   Por exemplo, o arquivo poderia conter essa linha::
 
        /path/to/djmaster
 
-#. Coloque ``djmaster/django/bin`` em seu PATH do sistema. Este diretório inclui
-   inclui utilitários de administração, tais como o ``django-admin.py``.
+#. Coloque ``djmaster/django/bin`` em seu PATH do sistema. Este diretÃ³rio inclui
+   inclui utilitÃ¡rios de administraÃ§Ã£o, tais como o ``django-admin.py``.
 
 .. admonition:: Dica:
 
-    Se arquivos ``.pth`` são novos para você, você pode aprender mais sobre eles em
+    Se arquivos ``.pth`` sÃ£o novos para vocÃª, vocÃª pode aprender mais sobre eles em
     http://www.djangoproject.com/r/python/site-module/.
 
-Depois de baixar pelo Git e seguir os passos anteriores, não há nescessidade de 
-executar ``python setup.py install``-- você acabou de fazer o trabalho manualmente!
+Depois de baixar pelo Git e seguir os passos anteriores, nÃ£o hÃ¡ nescessidade de 
+executar ``python setup.py install``-- vocÃª acabou de fazer o trabalho manualmente!
 
-Como o código do Django muda frequentemente com correção de bugs e adção de recurso,
-você provavelmente queira atualiza-lo de vez em quando. Para atualizar o código, 
-apenas execute o comando ``git pull origin master`` dentro do diretório ``djmaster``.
-Quando você executar o comando, o Git entrará em contato com https://github.com/django/django,
-determinando se algo código fonte foi mudado, e atualizando a sua versão local com as alterações
-que tem sido feitas desde o último update. It's quite slick.
+Como o cÃ³digo do Django muda frequentemente com correÃ§Ã£o de bugs e adÃ§Ã£o de recurso,
+vocÃª provavelmente queira atualiza-lo de vez em quando. Para atualizar o cÃ³digo, 
+apenas execute o comando ``git pull origin master`` dentro do diretÃ³rio ``djmaster``.
+Quando vocÃª executar o comando, o Git entrarÃ¡ em contato com https://github.com/django/django,
+determinando se algo cÃ³digo fonte foi mudado, e atualizando a sua versÃ£o local com as alteraÃ§Ãµes
+que tem sido feitas desde o Ãºltimo update. It's quite slick.
 
-Finalmente, se você usa a versão de desenvolvimento do Django, você deve saber como 
-qual a versão do Django está sendo executada. Conhecer o número da sua versão será importante
-se você nescessitar correr até a comunidade para ajuda, ou se você apresentar melhorias 
-para o framework. Nestes casos, você deverá dizer as pessoas que revisionam, também conhecido como "commit", 
-o que você está usando. Para saber o seu atual "commit", digite "git log -1" de dentro de um diretório ``django``, e 
-olhe para os identificadores depois de "commit". Este número muda toda vez que o Django é alterado,
-seja por meio de uma correção de bug, adição de funcionalidade, documentação ou melhoria de qualquer coisa.
+Finalmente, se vocÃª usa a versÃ£o de desenvolvimento do Django, vocÃª deve saber como 
+qual a versÃ£o do Django estÃ¡ sendo executada. Conhecer o nÃºmero da sua versÃ£o serÃ¡ importante
+se vocÃª nescessitar correr atÃ© a comunidade para ajuda, ou se vocÃª apresentar melhorias 
+para o framework. Nestes casos, vocÃª deverÃ¡ dizer as pessoas que revisionam, tambÃ©m conhecido como "commit", 
+o que vocÃª estÃ¡ usando. Para saber o seu atual "commit", digite "git log -1" de dentro de um diretÃ³rio ``django``, e 
+olhe para os identificadores depois de "commit". Este nÃºmero muda toda vez que o Django Ã© alterado,
+seja por meio de uma correÃ§Ã£o de bug, adiÃ§Ã£o de funcionalidade, documentaÃ§Ã£o ou melhoria de qualquer coisa.
 
-Testando a instalação do Django
+Testando a instalaÃ§Ã£o do Django
 ================================
 
-Para um feedback positivo de pós instalação, pare um instante para ver se a instalação
-está funcionando. Em um shell de comando, mude para outro diretório (ex., *não* o diretório que que
-contém o diretório ``django``) e inicie o interpretador interativo Python digitando ``python``. Se a 
-instalação obteve exito, você podera importar o módulo ``django``:
+Para um feedback positivo de pÃ³s instalaÃ§Ã£o, pare um instante para ver se a instalaÃ§Ã£o
+estÃ¡ funcionando. Em um shell de comando, mude para outro diretÃ³rio (ex., *nÃ£o* o diretÃ³rio que que
+contÃ©m o diretÃ³rio ``django``) e inicie o interpretador interativo Python digitando ``python``. Se a 
+instalaÃ§Ã£o obteve exito, vocÃª podera importar o mÃ³dulo ``django``:
 
     >>> import django
     >>> django.VERSION
@@ -190,14 +190,14 @@ instalação obteve exito, você podera importar o módulo ``django``:
 
 .. admonition:: Exemplos do Interpretador Interativo
 
-    O interpretador interativo do Python é um programa de linha de comando que permite que você escreva
+    O interpretador interativo do Python Ã© um programa de linha de comando que permite que vocÃª escreva
     um programa Python interativamente. Para inicializa-lo, execute o comando ``python`` na linha de comando.
 
-    Ao longo desse livro, apresentamos exemplos em sessões no interpretador interativo do Python. Você poderá
-    reconhecer esses exemplos pelos três sinais de maior quê (``>>>``), que designam o interpretador no prompt. Se
-    você está copiando exemplos deste livro, não copie estes sinais de maio-quê.
+    Ao longo desse livro, apresentamos exemplos em sessÃµes no interpretador interativo do Python. VocÃª poderÃ¡
+    reconhecer esses exemplos pelos trÃªs sinais de maior quÃª (``>>>``), que designam o interpretador no prompt. Se
+    vocÃª estÃ¡ copiando exemplos deste livro, nÃ£o copie estes sinais de maio-quÃª.
 
-    Declarações de várias linhas nesse interpretador interativo são preenchidos com três pontos (``...``). Por exemplo::
+    DeclaraÃ§Ãµes de vÃ¡rias linhas nesse interpretador interativo sÃ£o preenchidos com trÃªs pontos (``...``). Por exemplo::
 
         >>> print """This is a
         ... string that spans
@@ -210,20 +210,20 @@ instalação obteve exito, você podera importar o módulo ``django``:
         >>> my_function('hello')
         hello
 
-    Esses três pontos no inicio de linhas adicionais são inseridas pelo shell do Python -- eles não são parte
-    daquilo que está sendo inserido. Nós incluimos aqui para ser fiel a saída real do interpretador. Se você copiar
-    estes exemplos para acompanhar, não copie estes pontos.
+    Esses trÃªs pontos no inicio de linhas adicionais sÃ£o inseridas pelo shell do Python -- eles nÃ£o sÃ£o parte
+    daquilo que estÃ¡ sendo inserido. NÃ³s incluimos aqui para ser fiel a saÃ­da real do interpretador. Se vocÃª copiar
+    estes exemplos para acompanhar, nÃ£o copie estes pontos.
 
 Configurando um Banco de Dados
 ===============================
 
-Neste ponto, você pode muito bem começar a escrever uma aplicação web com o Django, 
-porque os pré-requisitos rápidos do Django é apenas estar trabalhando com uma instalação do Python.
-No entanto, as probabilidades de que você irá desenvolver um Web site com um *banco de dados dirigido*, 
-neste caso, você nescessitará de configurar um servidor de banco de dados.
+Neste ponto, vocÃª pode muito bem comeÃ§ar a escrever uma aplicaÃ§Ã£o web com o Django, 
+porque os prÃ©-requisitos rÃ¡pidos do Django Ã© apenas estar trabalhando com uma instalaÃ§Ã£o do Python.
+No entanto, as probabilidades de que vocÃª irÃ¡ desenvolver um Web site com um *banco de dados dirigido*, 
+neste caso, vocÃª nescessitarÃ¡ de configurar um servidor de banco de dados.
 
-Se você apenas quer começar a jogar com o Django, pule para a seção "Começando um Projeto" --
-mas tenha em mente que todos os exemplos desse livro asumme que você tenha trabalhado configurado
+Se vocÃª apenas quer comeÃ§ar a jogar com o Django, pule para a seÃ§Ã£o "ComeÃ§ando um Projeto" --
+mas tenha em mente que todos os exemplos desse livro asumme que vocÃª tenha trabalhado configurado
 um banco de dados.
 
 Django suporta quatro tipo de banco de dados
@@ -233,123 +233,123 @@ Django suporta quatro tipo de banco de dados
 * MySQL (http://www.mysql.com/)
 * Oracle (http://www.oracle.com/)
 
-Para a maior parte, todos esses bancos de dados trabalham igualmente bem com o núcleo do Django framework.
-(Uma notável excessão é o opcional GIS suporte ao Django, que é muito mais poderoso que o PostgreSQL do que 
-com outros bancos de dados.) Se você não estiver amarrado a nenhum sistema legado e tem a liberdade para 
-escolher o banco de dados, nós recomendamos PostgreSQL, que alcança um bom equilibrio entre custo, recurso, 
+Para a maior parte, todos esses bancos de dados trabalham igualmente bem com o nÃºcleo do Django framework.
+(Uma notÃ¡vel excessÃ£o Ã© o opcional GIS suporte ao Django, que Ã© muito mais poderoso que o PostgreSQL do que 
+com outros bancos de dados.) Se vocÃª nÃ£o estiver amarrado a nenhum sistema legado e tem a liberdade para 
+escolher o banco de dados, nÃ³s recomendamos PostgreSQL, que alcanÃ§a um bom equilibrio entre custo, recurso, 
 velocidade e estabilidade.
 
-Configurar o banco de dados é um processo de duas etapas:
+Configurar o banco de dados Ã© um processo de duas etapas:
 
-* Primeiro, você prescisa instalar e configurar servidor de banco de dados em si.
-  Este processo está além do escopo desse livro, mas cada um dos quatro banco de dados
-  tem uma rica documentação em seus próprios websites. (Se, você está em um servidor
-  de hospedagem compartilhado, provavelmente eles irão definiram isso para você.)
+* Primeiro, vocÃª prescisa instalar e configurar servidor de banco de dados em si.
+  Este processo estÃ¡ alÃ©m do escopo desse livro, mas cada um dos quatro banco de dados
+  tem uma rica documentaÃ§Ã£o em seus prÃ³prios websites. (Se, vocÃª estÃ¡ em um servidor
+  de hospedagem compartilhado, provavelmente eles irÃ£o definiram isso para vocÃª.)
 
-* Segundo, você prescisa instalar a biblioteca Python para o seu banco de dados em particular. 
-  Isso é um pouco de código de terceiros que permite ao Python se comunicar com o banco de dados.
-  Nós delineamos especificamente, por requerimentos de banco de dados nas seções seguintes.
+* Segundo, vocÃª prescisa instalar a biblioteca Python para o seu banco de dados em particular. 
+  Isso Ã© um pouco de cÃ³digo de terceiros que permite ao Python se comunicar com o banco de dados.
+  NÃ³s delineamos especificamente, por requerimentos de banco de dados nas seÃ§Ãµes seguintes.
 
-Se você está apenas brincando um pouco com o Django e não quer instalar um servidor de 
-banco de dados, considere então usar o SQLite. SQLite é o unico na lista de banco de dados suportados
-é o único que não requere nenhum dos passos citados acima. Ele se limita em ler e escrever informações
-em um único arquivo em seu sistema, e a versão 2.5 do Python ou superior inclui um suporte nativo para ele.
+Se vocÃª estÃ¡ apenas brincando um pouco com o Django e nÃ£o quer instalar um servidor de 
+banco de dados, considere entÃ£o usar o SQLite. SQLite Ã© o unico na lista de banco de dados suportados
+Ã© o Ãºnico que nÃ£o requere nenhum dos passos citados acima. Ele se limita em ler e escrever informaÃ§Ãµes
+em um Ãºnico arquivo em seu sistema, e a versÃ£o 2.5 do Python ou superior inclui um suporte nativo para ele.
 
-No Windows, a obtenção de drives binários do banco de dados pode ser algo frustante. Se você está ansioso para
-saltar, nós recomendamos o uso do Python 2.7 e seu suporte nativo para o SQLite.
+No Windows, a obtenÃ§Ã£o de drives binÃ¡rios do banco de dados pode ser algo frustante. Se vocÃª estÃ¡ ansioso para
+saltar, nÃ³s recomendamos o uso do Python 2.7 e seu suporte nativo para o SQLite.
 
 Usando Django com o PostgresSQL
 --------------------------------
 
-Se você esta usando o PostgreSQL, você nescessita instalar o pacote ``psycopg`` ou o ``psycopg2`` 
-pelo endereço http://www.djangoproject.com/r/python-pgsql/. Nós recomendamos ``psycopg2``, como é mais novo, 
-mais ativamente desenvolvido e pode ser fácilmente instalado. De qualquer forma, tome nota da versão que 
-você está ultilizando, a versão 1 ou a 2; você irá nescessitar dessa informação posteriormente.
+Se vocÃª esta usando o PostgreSQL, vocÃª nescessita instalar o pacote ``psycopg`` ou o ``psycopg2`` 
+pelo endereÃ§o http://www.djangoproject.com/r/python-pgsql/. NÃ³s recomendamos ``psycopg2``, como Ã© mais novo, 
+mais ativamente desenvolvido e pode ser fÃ¡cilmente instalado. De qualquer forma, tome nota da versÃ£o que 
+vocÃª estÃ¡ ultilizando, a versÃ£o 1 ou a 2; vocÃª irÃ¡ nescessitar dessa informaÃ§Ã£o posteriormente.
 
-Se você está usando o PostgreSQL no Windows, se pode achar um precompilador de binários do ``psycopg``
+Se vocÃª estÃ¡ usando o PostgreSQL no Windows, se pode achar um precompilador de binÃ¡rios do ``psycopg``
 no http://www.djangoproject.com/r/python-pgsql/windows/.
 
-Se você estiver no Linux, verifique se a sua distribuição de gerenciamento de pacotes sistemas ofereçe
+Se vocÃª estiver no Linux, verifique se a sua distribuiÃ§Ã£o de gerenciamento de pacotes sistemas ofereÃ§e
 um pacote chamado "python-psycopg2", "psycopg2-python", "python-postgresql" ou alguma coisa similar.
 
 Usando Django com SQLite 3
 --------------------------
 
-Você está com sorte: pois não é requerido especificidades de banco de dados, porque o Python vem com suporte
-so SQLite. Pule para a próxima seção.
+VocÃª estÃ¡ com sorte: pois nÃ£o Ã© requerido especificidades de banco de dados, porque o Python vem com suporte
+so SQLite. Pule para a prÃ³xima seÃ§Ã£o.
 
 Usando Django com MySQL
 -----------------------
 
-Django requer MySQL 4.0 ou acima. A versões 3.x não suporta subconsultas aninhadas 
-e algumas outras declarações SQL bastante padrão.
+Django requer MySQL 4.0 ou acima. As versÃµes 3.x nÃ£o suportam subconsultas aninhadas 
+e algumas outras instruÃ§Ãµes SQL bastante comuns.
 
-Se você nescessita de instalar o pacote ``MySQLdb`` o endereço é: http://www.djangoproject.com/r/python-mysql/.
+SerÃ¡ nescessÃ¡rio instalar tambÃ©m o pacote ``MySQLdb``: http://www.djangoproject.com/r/python-mysql/.
 
-Se você está em uma distribuição Linux, verifique se a sua distribuição de gerenciamento de pacotes do sistema
-oferece um pacote chamado "python-mysql", "python-mysqldb", "mysql-python" ou alguma coisa parecida.
+Se estiver no Linux, verifique se a sua distribuiÃ§Ã£o de sistema de gerenciamento de pacotes
+oferece um pacote chamado "python-mysql", "python-mysqldb", "mysql-python" ou algo parecida.
 
 Using Django com Oracle
 ------------------------
 
-Django trabalha com o Oracle Database Server verões 9i ou superior.
+Django trabalha com o Oracle Database Server verÃµes 9i ou superior.
 
-Se você está usando Oracle, você nescessita instalar a biblioteca ``cx_Oracle``,
-no http://cx-oracle.sourceforge.net/. Use a verão 4.3.1 ou superior, mas evite a versão 5.0
-devido a um bug nesta versão do driver. A versão 5.0.1 resolveu o bug, entretando, você pode escolher 
-uma versão superior também.
+Se vocÃª estÃ¡ usando Oracle, vocÃª nescessita instalar a biblioteca ``cx_Oracle``,
+no http://cx-oracle.sourceforge.net/. Use a verÃ£o 4.3.1 ou superior, mas evite a versÃ£o 5.0
+devido a um bug nesta versÃ£o do driver. A versÃ£o 5.0.1 resolveu o bug, entretando, vocÃª pode escolher 
+uma versÃ£o superior tambÃ©m.
 
 Usando Django sem um Banco de Dados
 ------------------------------------
 
-Como mencionado anteriormente, o Django atualmente não requer o uso de banco de dados. Se você quer apenas
-usar ele como servidor de páginas dinâmicas que não ultilizam o banco de dados, está
+Como mencionado anteriormente, o Django atualmente nÃ£o requer o uso de banco de dados. Se vocÃª quer apenas
+usar ele como servidor de pÃ¡ginas dinÃ¢micas que nÃ£o ultilizam o banco de dados, estÃ¡
 tudo perfeitamente bem.
 
 Como o que disse, tenha em mente que algumas das ferramentas extras juntas com o Django *ultilizam* um banco
-de dados, então se você escolher não usar um banco de dados, você não poderá usufruir desses recursos.
+de dados, entÃ£o se vocÃª escolher nÃ£o usar um banco de dados, vocÃª nÃ£o poderÃ¡ usufruir desses recursos.
 (Destacamos esses recursos ao longo do livro.)
 
-Começando um Projeto
+ComeÃ§ando um Projeto
 =====================
 
 Uma vez que o Python esteja instalado, Django e (opcionalmente) um servidor/biblioteca de banco de dados,
-você pode pegar o primeiro passo no desenvolvimento de uma aplicação Django atravéz da criação de um *projeto*.
+vocÃª pode pegar o primeiro passo no desenvolvimento de uma aplicaÃ§Ã£o Django atravÃ©z da criaÃ§Ã£o de um *projeto*.
 
-Um projeto é uma coleção de configurações para uma instância do Django, incluindo uma configuração de banco de
-dados, opções específicas do Django e configurações de aplicações específicas.
+Um projeto Ã© uma coleÃ§Ã£o de configuraÃ§Ãµes para uma instÃ¢ncia do Django, incluindo uma configuraÃ§Ã£o de banco de
+dados, opÃ§Ãµes especÃ­ficas do Django e configuraÃ§Ãµes de aplicaÃ§Ãµes especÃ­ficas.
 
-Se esta é a sua primeira vez usando Django, você terá que cuidar de algumas configurações iniciais.
-Criar um novo diretório para começar a trabalhar nele, talvez alguma coisa parecida como ``/home/username/djcode``.
+Se esta Ã© a sua primeira vez usando Django, vocÃª terÃ¡ que cuidar de algumas configuraÃ§Ãµes iniciais.
+Criar um novo diretÃ³rio para comeÃ§ar a trabalhar nele, talvez alguma coisa parecida como ``/home/username/djcode``.
 
-.. admonition:: Aonde Coloco Esse Diretório Vivo?
+.. admonition:: Aonde Coloco Esse DiretÃ³rio Vivo?
     
-    Se você já tem alguma experiência com PHP, você provavelmente está acostumado a colocar o código sobre a raiz do
-    servidor (um lugar como ``/var/www``). Com Django, você não faz isso. Não é uma boa idéia colocar qualquer código
-    Python dentro da raíz do seu servidor web. Porque ao fazê-lo você corre o risco das pessoas verem o seu código fonte.
-    E isso não é bom.
+    Se vocÃª jÃ¡ tem alguma experiÃªncia com PHP, vocÃª provavelmente estÃ¡ acostumado a colocar o cÃ³digo sobre a raiz do
+    servidor (um lugar como ``/var/www``). Com Django, vocÃª nÃ£o faz isso. NÃ£o Ã© uma boa idÃ©ia colocar qualquer cÃ³digo
+    Python dentro da raÃ­z do seu servidor web. Porque ao fazÃª-lo vocÃª corre o risco das pessoas verem o seu cÃ³digo fonte.
+    E isso nÃ£o Ã© bom.
 
-    Coloque o seu código em algum diretório **fora** da raíz do documento.
+    Coloque o seu cÃ³digo em algum diretÃ³rio **fora** da raÃ­z do documento.
 
-Vá até o diretório que você criou, e execute o comando ``django-admin.py startproject mysite``. Isso irá criar um diretório
-chamado``mysite`` no seu diretório corrente.
+VÃ¡ atÃ© o diretÃ³rio que vocÃª criou, e execute o comando ``django-admin.py startproject mysite``. Isso irÃ¡ criar um diretÃ³rio
+chamado``mysite`` no seu diretÃ³rio corrente.
 
 .. nota::
-    ``django-admin.py`` deve estar no path do sistema se você instalou o Django via o utilitário ``setup.py``
+    ``django-admin.py`` deve estar no path do sistema se vocÃª instalou o Django via o utilitÃ¡rio ``setup.py``
 
-    Se você estiver usando uma versão de desenvolvimento, você irá achar ``django-admin.py`` em ``djmaster/django/bin``.
-    Por causa que você irá usar ``django-admin.py`` várias vezes, considere adicionar ao path do sistema. No Unix, você pode
-    fazer isso usando links simbólicos de ``/usr/local/bin``, usando um comando como ``sudo ln -s /path/to/django/bin/django-admin.py
-    /usr/local/bin/django-admin.py``. No Windows, você nescessitará atualizar o seu variávem de ambiente ``PATH``. 
+    Se vocÃª estiver usando uma versÃ£o de desenvolvimento, vocÃª irÃ¡ achar ``django-admin.py`` em ``djmaster/django/bin``.
+    Por causa que vocÃª irÃ¡ usar ``django-admin.py`` vÃ¡rias vezes, considere adicionar ao path do sistema. No Unix, vocÃª pode
+    fazer isso usando links simbÃ³licos de ``/usr/local/bin``, usando um comando como ``sudo ln -s /path/to/django/bin/django-admin.py
+    /usr/local/bin/django-admin.py``. No Windows, vocÃª nescessitarÃ¡ atualizar o seu variÃ¡vem de ambiente ``PATH``. 
 
-    Se você instalou o Django de um pacote de versão para o sua distribuição Linux, ``django-admin.py`` pode ser chamado
+    Se vocÃª instalou o Django de um pacote de versÃ£o para o sua distribuiÃ§Ã£o Linux, ``django-admin.py`` pode ser chamado
     de ``django-admin``.
 
-Se você ver uma mensagem de "permission denied" ao executar ``django-admin.py startproject``, você nescessitará mudar as 
-permissões dos arquivos. Para isso, navegue até o diretório aonde ``django-admin.py`` está instalado (e.g., ``cd /usr/local/bin``)
+Se vocÃª ver uma mensagem de "permission denied" ao executar ``django-admin.py startproject``, vocÃª nescessitarÃ¡ mudar as 
+permissÃµes dos arquivos. Para isso, navegue atÃ© o diretÃ³rio aonde ``django-admin.py`` estÃ¡ instalado (e.g., ``cd /usr/local/bin``)
 e execute o comando ``chmod +x django-admin.py``.
 
-O commando ``startproject``  cria um diretório contendo 5 arquivos::
+O commando ``startproject``  cria um diretÃ³rio contendo 5 arquivos::
 
     mysite/
         manage.py
@@ -359,53 +359,53 @@ O commando ``startproject``  cria um diretório contendo 5 arquivos::
             urls.py
             wsgi.py
 
-.. nota:: Não corresponde com você vê?
+.. nota:: NÃ£o corresponde com vocÃª vÃª?
     
-    O layout padrão do projeto recentemente mudado. Se você está vendo um layout "flat" (sem o diretório interior
-    ``mysite/``), você provavelmente está usando uma versão do Django que não corresponde a versão do livro. Este 
-    livro cobre Django 1.4 acima, então se você está usando uma versão antiga você provavelmente vai querer
-    consultar o dacumentação oficial do Django.
+    O layout padrÃ£o do projeto recentemente mudado. Se vocÃª estÃ¡ vendo um layout "flat" (sem o diretÃ³rio interior
+    ``mysite/``), vocÃª provavelmente estÃ¡ usando uma versÃ£o do Django que nÃ£o corresponde a versÃ£o do livro. Este 
+    livro cobre Django 1.4 acima, entÃ£o se vocÃª estÃ¡ usando uma versÃ£o antiga vocÃª provavelmente vai querer
+    consultar o dacumentaÃ§Ã£o oficial do Django.
 
-    A documentação das versões Django 1.x está no endereço  https://docs.djangoproject.com/en/1.X/.
+    A documentaÃ§Ã£o das versÃµes Django 1.x estÃ¡ no endereÃ§o  https://docs.djangoproject.com/en/1.X/.
 
-Estes arquivos são os seguintes
+Estes arquivos sÃ£o os seguintes
 
-* ``mysite/``: O exterior do diretório ``mysite/`` é apenas um container para o seu projeto. Esse nome
-  não importa para o Django; você pode renomear ele da maneira que desejar.
+* ``mysite/``: O exterior do diretÃ³rio ``mysite/`` Ã© apenas um container para o seu projeto. Esse nome
+  nÃ£o importa para o Django; vocÃª pode renomear ele da maneira que desejar.
 
-* ``manage.py``: Um utilitário de linha de comando que permite que você interaja com o projeto Django de várias formas.
-  Escreva ``python manage.py help`` para entender o que ele é capaz de fazer. Você nunca deverá editar este arquivo;
-  ele é criado nesse diretório puramente por conveniência.
+* ``manage.py``: Um utilitÃ¡rio de linha de comando que permite que vocÃª interaja com o projeto Django de vÃ¡rias formas.
+  Escreva ``python manage.py help`` para entender o que ele Ã© capaz de fazer. VocÃª nunca deverÃ¡ editar este arquivo;
+  ele Ã© criado nesse diretÃ³rio puramente por conveniÃªncia.
 
-* ``mysite/mysite/``: O interior do diretório ``mysite/`` é o atual pacote Python para o seu projeto. Este nome é o nome 
-  do pacote Python que você nescessita usar para importar qualquer coisa dentro dele (e.g. ``import mysite.settings``).
+* ``mysite/mysite/``: O interior do diretÃ³rio ``mysite/`` Ã© o atual pacote Python para o seu projeto. Este nome Ã© o nome 
+  do pacote Python que vocÃª nescessita usar para importar qualquer coisa dentro dele (e.g. ``import mysite.settings``).
 
-*``__init__.py``: Um arquivo necessário para o Python tratar o diretório ``mysite`` como um pacote (i.e., um grupo de 
-módulos Python). Ele é um arquivo vazio, e geralmente você não adiciona nada a ele.
+*``__init__.py``: Um arquivo necessÃ¡rio para o Python tratar o diretÃ³rio ``mysite`` como um pacote (i.e., um grupo de 
+mÃ³dulos Python). Ele Ã© um arquivo vazio, e geralmente vocÃª nÃ£o adiciona nada a ele.
 
-* ``settings.py``: Definições/configurações para este projeto Django. Dê uma olhada nele para ter uma idéia dos tipos
-  configurações avaliadas, juntamente com os seus valores padrões.
+* ``settings.py``: DefiniÃ§Ãµes/configuraÃ§Ãµes para este projeto Django. DÃª uma olhada nele para ter uma idÃ©ia dos tipos
+  configuraÃ§Ãµes avaliadas, juntamente com os seus valores padrÃµes.
 
-* ``urls.py``: As URLs para este projeto Django. Pense nisso como como uma "tabela de conteúdo" para o seu site em Django.  
+* ``urls.py``: As URLs para este projeto Django. Pense nisso como como uma "tabela de conteÃºdo" para o seu site em Django.  
 
-* ``wsgi.py``: Um ponto de entrada para o WSGI compatíveis com servidores web para servir o seu projeto.
+* ``wsgi.py``: Um ponto de entrada para o WSGI compatÃ­veis com servidores web para servir o seu projeto.
   Veja como fazer deploy com WSGI (https://docs.djangoproject.com/en/1.4/howto/deployment/wsgi/) para maiores detalhes.
 
-Apesar do seu pequeno tamanho, estes arquivos já constituem uma aplicação de trabalho Django.
+Apesar do seu pequeno tamanho, estes arquivos jÃ¡ constituem uma aplicaÃ§Ã£o de trabalho Django.
 
 Executando o servidor de desenvolvimento
 -----------------------------------------
 
-Para mais alguns feedbacks positívos após a instalação, vamos executar o servidor de desenvolvimento do Django 
-para ver a nossa aplicação em ação.
+Para mais alguns feedbacks positÃ­vos apÃ³s a instalaÃ§Ã£o, vamos executar o servidor de desenvolvimento do Django 
+para ver a nossa aplicaÃ§Ã£o em aÃ§Ã£o.
 
-O servidor de desenvolvimento do Django (também chamado de "runserver") é um servidor interno, leve, que 
-você poderá usar enquanto desenvolve o seu site. Ele é incluso com o Django então você pode desenvolver o seu 
-seite rapidamente, sem ter que lidar com configuracão de servidor de produção (e.g., Apache) até que você esteja
-realmente pronto para o ambiente de produção. O servidor de desenvolvimento observa o seu código e automáticamente
-recarrega automáticamente, tornando fácil para você alterar o seu código sem a necessidade de de reiniciar qualquer coisa.
+O servidor de desenvolvimento do Django (tambÃ©m chamado de "runserver") Ã© um servidor interno, leve, que 
+vocÃª poderÃ¡ usar enquanto desenvolve o seu site. Ele Ã© incluso com o Django entÃ£o vocÃª pode desenvolver o seu 
+seite rapidamente, sem ter que lidar com configuracÃ£o de servidor de produÃ§Ã£o (e.g., Apache) atÃ© que vocÃª esteja
+realmente pronto para o ambiente de produÃ§Ã£o. O servidor de desenvolvimento observa o seu cÃ³digo e automÃ¡ticamente
+recarrega automÃ¡ticamente, tornando fÃ¡cil para vocÃª alterar o seu cÃ³digo sem a necessidade de de reiniciar qualquer coisa.
 
-Para iniciar o servidor, mude para o seu diretório do container do projeto (``cd mysite``), se você não estiver, 
+Para iniciar o servidor, mude para o seu diretÃ³rio do container do projeto (``cd mysite``), se vocÃª nÃ£o estiver, 
 execute este commando::
 
     python manage.py runserver
@@ -419,35 +419,35 @@ You'll see something like this::
     Development server is running at http://127.0.0.1:8000/
     Quit the server with CONTROL-C.
 
-Isso inicia o servidor localmente, na porta 8000, acessível somente para conecções do seu próprio computador. Agora que 
-está rodando visite http://127.0.0.1:8000/ com o seu web browser. Você vai ver um "Welcome to Django" em uma página sombreada 
-com agradáveis tons de azul pastel. Está funcionando!!
+Isso inicia o servidor localmente, na porta 8000, acessÃ­vel somente para conecÃ§Ãµes do seu prÃ³prio computador. Agora que 
+estÃ¡ rodando visite http://127.0.0.1:8000/ com o seu web browser. VocÃª vai ver um "Welcome to Django" em uma pÃ¡gina sombreada 
+com agradÃ¡veis tons de azul pastel. EstÃ¡ funcionando!!
 
-Uma nota final importante sobre o servidor de desenvolvimento que é importante mencionar antes de prosseguir. Embora 
-este servidor seja conveniente para o desenvolvimento, resistir a tentação de usá-lo em qualquer coisa parecida com um 
-ambiente e produção. O servidor de desenvolvimento pode lidar com apenas um pedido de cada vez de maneira confiável, e 
-não passou por nenhuma espécie de auditoria de segurança. Quando chegar a hora de lançar o seu site, consulte o Capítulo
-12 para informações sobre como fazer o deploy do Django.
+Uma nota final importante sobre o servidor de desenvolvimento que Ã© importante mencionar antes de prosseguir. Embora 
+este servidor seja conveniente para o desenvolvimento, resistir a tentaÃ§Ã£o de usÃ¡-lo em qualquer coisa parecida com um 
+ambiente e produÃ§Ã£o. O servidor de desenvolvimento pode lidar com apenas um pedido de cada vez de maneira confiÃ¡vel, e 
+nÃ£o passou por nenhuma espÃ©cie de auditoria de seguranÃ§a. Quando chegar a hora de lanÃ§ar o seu site, consulte o CapÃ­tulo
+12 para informaÃ§Ãµes sobre como fazer o deploy do Django.
 
 .. admonition:: Mudando o Host ou Porta do Servidor de Desenvolvimento
-    Por padrão, o comando `runserver` inicializa o servidor de desenvolvimento na porta 8000, ouvindo somente para 
-    conexões locais. Se você deseja mudar a porta do servidor, passe isso como argumento na linha de comando::
+    Por padrÃ£o, o comando `runserver` inicializa o servidor de desenvolvimento na porta 8000, ouvindo somente para 
+    conexÃµes locais. Se vocÃª deseja mudar a porta do servidor, passe isso como argumento na linha de comando::
 
         python manage.py runserver 8080
 
-    Ao especificar um endereço de IP, você pode dizer ao servidor para permitir conexões não locais. Isso é especificamente
-    útil se você quisesse compartilhar um site de desenvolvimento com outros membros da sua equipe. O endereço de IP ``0.0.0.0``
+    Ao especificar um endereÃ§o de IP, vocÃª pode dizer ao servidor para permitir conexÃµes nÃ£o locais. Isso Ã© especificamente
+    Ãºtil se vocÃª quisesse compartilhar um site de desenvolvimento com outros membros da sua equipe. O endereÃ§o de IP ``0.0.0.0``
     diz ao servidor atender qualquer interface de rede::
 
         python manage.py runserver 0.0.0.0:8000
 
-    Quando você tiver feito isso, outros computadores da sua rede local poderão visualizar o seu site em Django visitando o seu
-    endereço de IP no Web browser, e.g., http://192.168.1.103:8000/ .(Note que você terá que consutar as suas configurações de rede
-    para determinar o seu endereço de IP em sua rede local. Usuários Unix, tentarão rodar "ifconfig" no prompt de comando para 
-    pegar essa informação, usuários Windows, tentarão "ipconfig".)
+    Quando vocÃª tiver feito isso, outros computadores da sua rede local poderÃ£o visualizar o seu site em Django visitando o seu
+    endereÃ§o de IP no Web browser, e.g., http://192.168.1.103:8000/ .(Note que vocÃª terÃ¡ que consutar as suas configuraÃ§Ãµes de rede
+    para determinar o seu endereÃ§o de IP em sua rede local. UsuÃ¡rios Unix, tentarÃ£o rodar "ifconfig" no prompt de comando para 
+    pegar essa informaÃ§Ã£o, usuÃ¡rios Windows, tentarÃ£o "ipconfig".)
 
 O que vem em seguida?
 =====================
 
-Agora que você tem tudo instalado e o servidor de desenvolvimento rodando, você está pronto para o :doc:`aprendendo
-o básico <cápitulo03>` de servir páginas Web com Django.
+Agora que vocÃª tem tudo instalado e o servidor de desenvolvimento rodando, vocÃª estÃ¡ pronto para o :doc:`aprendendo
+o bÃ¡sico <cÃ¡pitulo03>` de servir pÃ¡ginas Web com Django.
