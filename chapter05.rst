@@ -210,7 +210,7 @@ Aqui está um resumo de cada configuração.
 
       ``django.db.backends.oracle``                Oracle       ``cx_Oracle``,
                                                                 http://www.djangoproject.com/r/python-oracle/.
-      ============================================ ============ ================================================
+      ========================================== ============ ================================================
 
   Note that for whichever database back-end you use, you'll need to download
   and install the appropriate database adapter. Each one is available for
