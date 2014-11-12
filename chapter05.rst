@@ -197,16 +197,16 @@ Aqui está um resumo de cada configuração.
 
   .. table:: Table 5-1. Database Engine Settings
 
-      ============================================ ============ ================================================
-      Setting                                      Database     Required Adapter
-      ============================================ ============ ================================================
-      ``django.db.backends.postgresql_psycopg2``   PostgreSQL   ``psycopg`` version 2.x,
+      ========================================== ============= ================================================
+      Configuração                               Base de dados Adaptador necessário
+      ========================================== ============= ================================================
+      ``django.db.backends.postgresql_psycopg2``   PostgreSQL   ``psycopg`` versão 2.x,
                                                                 http://www.djangoproject.com/r/python-pgsql/.
 
       ``django.db.backends.mysql``                 MySQL        ``MySQLdb``,
                                                                 http://www.djangoproject.com/r/python-mysql/.
 
-      ``django.db.backends.sqlite3``               SQLite       No adapter needed.
+      ``django.db.backends.sqlite3``               SQLite       Não é necessário adaptador.
 
       ``django.db.backends.oracle``                Oracle       ``cx_Oracle``,
                                                                 http://www.djangoproject.com/r/python-oracle/.
