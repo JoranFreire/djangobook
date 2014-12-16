@@ -297,7 +297,7 @@ Conhecimentos de Programação Requeridos
 
 Os leitores deste livro devem entender o básico da programação procedural e 
 orientada a objetos: estruturas de controle (e.x., ``if``, ``while``,
-``for``), estruturas de dados (listas, hashes/dicionarios), variáveis, classes
+``for``), estruturas de dados (listas, hashes/dicionários), variáveis, classes
 e objetos.
 
 Experiência em desenvolvimento web é, como você espera, de grande ajuda, mas 
