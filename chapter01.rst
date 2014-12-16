@@ -292,17 +292,18 @@ The appendixes are for reference. They, along with the free documentation at
 http://www.djangoproject.com/, are probably what you'll flip back to occasionally to
 recall syntax or find quick synopses of what certain parts of Django do.
 
-Required Programming Knowledge
+Conhecimentos de Programação Requeridos
 ------------------------------
 
-Readers of this book should understand the basics of procedural and
-object-oriented programming: control structures (e.g., ``if``, ``while``,
-``for``), data structures (lists, hashes/dictionaries), variables, classes and
-objects.
+Os leitores deste livro devem entender o basico da programação procedural e 
+orientada a objetos: estruturas de controle (e.x., ``if``, ``while``,
+``for``), estruturas de dados (listas, hashes/dicionarios), variáveis, classes
+e objetos.
 
-Experience in Web development is, as you may expect, very helpful, but it's
-not required to understand this book. Throughout the book, we try to promote
-best practices in Web development for readers who lack this experience.
+Experiência em desenvolvimento web é, como você espera, de grande ajuda, mas 
+não é necessária para entender este livro. Ao longo do livro, tentaremos mostrar
+as melhores praticas em desenvolvimento Web para os leitores que não tem essa 
+experiência.
 
 Required Python Knowledge
 -------------------------
