@@ -17,7 +17,7 @@ necessário.
 O objetivo desse livro é tornar você um expert em Django. O foco é duplo. Primeiro, 
 nós explicaremos, a fundo, o que o Django faz e como criar aplicações web com isso. 
 Segundo, nós discutiremos conceitos de nível superior quando apropriados, respondendo a questão 
-"Como eu posso aplicar essas ferramentas de efetivamente em meus projetos?" Lendo esse livro, 
+"Como eu posso aplicar essas ferramentas efetivamente em meus projetos?" Lendo esse livro, 
 você aprenderá as habilidades necessárias para criar poderoros web sites rapidamente, 
 com código que seja limpo e fácil de se manter.
 
@@ -102,8 +102,8 @@ do banco de dados -- poderia ser separada da exibição HTML da página, então 
 poderia editar este sem afetar o último.
 
 Esses problemas são precisamente o que um framework web tende a resolver. Um framework 
-web fornece uma infraestrutura de programação para suas aplicações, então forcar em 
-escrever limpo, manutenível código sem reinventar a roda. Por cima, isso é o que o Django faz.
+web fornece uma infraestrutura de programação para suas aplicações, então você pode forcar em 
+escrever código limpo e manutenível sem reinventar a roda. Por cima, isso é o que o Django faz.
 
 
 Os padrões de projeto MVC
@@ -292,17 +292,18 @@ The appendixes are for reference. They, along with the free documentation at
 http://www.djangoproject.com/, are probably what you'll flip back to occasionally to
 recall syntax or find quick synopses of what certain parts of Django do.
 
-Required Programming Knowledge
+Conhecimentos de Programação Requeridos
 ------------------------------
 
-Readers of this book should understand the basics of procedural and
-object-oriented programming: control structures (e.g., ``if``, ``while``,
-``for``), data structures (lists, hashes/dictionaries), variables, classes and
-objects.
+Os leitores deste livro devem entender o básico da programação procedural e 
+orientada a objetos: estruturas de controle (e.x., ``if``, ``while``,
+``for``), estruturas de dados (listas, hashes/dicionários), variáveis, classes
+e objetos.
 
-Experience in Web development is, as you may expect, very helpful, but it's
-not required to understand this book. Throughout the book, we try to promote
-best practices in Web development for readers who lack this experience.
+Experiência em desenvolvimento web é, como você espera, de grande ajuda, mas 
+não é necessária para entender este livro. Ao longo do livro, tentaremos mostrar
+as melhores práticas em desenvolvimento Web para os leitores que não tem essa 
+experiência.
 
 Required Python Knowledge
 -------------------------
