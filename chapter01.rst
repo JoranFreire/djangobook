@@ -18,7 +18,7 @@ O objetivo desse livro é tornar você um expert em Django. O foco é duplo. Pri
 nós explicaremos, a fundo, o que o Django faz e como criar aplicações web com isso. 
 Segundo, nós discutiremos conceitos de nível superior quando apropriados, respondendo a questão 
 "Como eu posso aplicar essas ferramentas efetivamente em meus projetos?" Lendo esse livro, 
-você aprenderá as habilidades necessárias para criar poderoros web sites rapidamente, 
+você aprenderá as habilidades necessárias para criar poderosos web sites rapidamente, 
 com código que seja limpo e fácil de se manter.
 
 O que é um framework web?
@@ -81,7 +81,7 @@ página com um navegador.
 Mas apesar da simplicidade, essa abordagem contém uma série de contratempos e problemas. 
 Pergunte a si mesmo essas questões:
 
-* O que acontece quando múltiplas partes de sua aplicações precisarem conectar ao 
+* O que acontece quando múltiplas partes de suas aplicações precisarem conectar ao 
 seu banco de dados? Certamente que o código da conexão da base de dados não precisa 
 ser duplicado a cada código CGI. A forma pragmática de se fazer seria refatorá-lo 
 em uma função compartilhada.
@@ -185,7 +185,7 @@ definição e acesso de dados(o model) é separado da lógica de requisito de ro
 (o controller), que por sinal separado da interface do usuário(the view). 
 (Nós iremos discutir MVC mais afundo no capítulo 5.)
 
-A vantagem chave dessa forma são os componentes que são *fracamente aclopados*. 
+A vantagem chave dessa forma são os componentes que são *fracamente acoplados*. 
 Cada distinta peça de uma aplicação feita em Django teve uma simples proposta 
 chave e pode ser mudada independente sem afetar as outras peças. Por exemplo, 
 o desenvolvedor pode mudar a URL para outra parte da aplicação sem afetar a 
